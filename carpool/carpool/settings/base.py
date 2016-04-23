@@ -117,6 +117,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 COMPRESS_OFFLINE = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_compressed')
+
 # Social Media Auth Settings
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
