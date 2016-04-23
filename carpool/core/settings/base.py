@@ -43,9 +43,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL = '/pools/'
 LOGIN_URL = '/login/'
 
-ROOT_URLCONF = 'carpool.urls'
+ROOT_URLCONF = 'core.urls'
 
-WSGI_APPLICATION = 'carpool.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -88,7 +88,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'carpool.context_processors.facebook_app',
+                'core.context_processors.facebook_app',
                 'django.template.context_processors.request',
             ],
         },

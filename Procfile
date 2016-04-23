@@ -1,1 +1,1 @@
-web: newrelic-admin run-program gunicorn --pythonpath carpool carpool.carpool.wsgi --log-file -
+web: newrelic-admin run-program gunicorn --pythonpath carpool carpool.core.wsgi --log-file -
