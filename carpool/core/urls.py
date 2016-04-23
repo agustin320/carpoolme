@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-import carpool.views
+import core.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/$', carpool.views.user_login, name='login'),
-    url(r'^logout/$', carpool.views.user_logout, name='logout'),
+    url(r'^login/$', core.views.user_login, name='login'),
+    url(r'^logout/$', core.views.user_logout, name='logout'),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^pools/', carpool.views.pools, name='pools'),
-    url(r'^pools/create', carpool.views.create_pool, name='create_pool'),
+    url(r'^pools/', core.views.pools, name='pools'),
+    url(r'^pools/create', core.views.create_pool, name='create_pool'),
  ]
