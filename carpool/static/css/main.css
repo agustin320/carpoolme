@@ -1,0 +1,16 @@
+body {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    background-color: #fcfcfc;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+
+.parallax-container {
+      height: 100%;
+}
