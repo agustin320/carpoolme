@@ -7,14 +7,16 @@
 {% load socialaccount %}
 {% providers_media_js %}
 
-        <div class="grey darken-4" id="login_wrapper" data-property="{videoURL:'http://youtu.be/qN0k-TjeTV4',containment:'#login_wrapper',autoPlay:true, mute:true, startAt:31, opacity:1,loop:true,showControls:false,showYTLogo:false,addRaster: true}">
+        <div class="grey darken-4" id="login_wrapper">
 
-            <div style="margin-top:200px;color: white;" class="valign-wrapper">
+            <div id="mast_head" style="margin-top:200px;color: white;display: none;" class="valign-wrapper container">
                 <h1 class="center-block">Carpool, by everyone</h1>
             </div>
-            <div style="margin-top:30px;" class="valign-wrapper">
+            <div id="login_btn" style="margin-top:30px;display: none;" class="valign-wrapper container">
                 <a class="center-block waves-effect waves-light btn-large blue darken-4" href="{% provider_login_url "facebook" method="js_sdk" %}"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> Login with Facebook</a>
             </div>
 
         </div>
+
+        <div id="login_video" data-property="{videoURL:'http://youtu.be/qN0k-TjeTV4',containment:'#login_wrapper',autoPlay:true, mute:true, startAt:31, opacity:1,loop:true,showControls:false,showYTLogo:false,addRaster: true}"></div>
 {% endblock %}
