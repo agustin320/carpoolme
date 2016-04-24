@@ -19,6 +19,7 @@ from django.contrib import admin
 import core.views
 
 urlpatterns = [
+    url(r'^$', core.views.user_login, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', core.views.user_login, name='login'),
     url(r'^logout/$', core.views.user_logout, name='logout'),

@@ -6,6 +6,17 @@
 
 {% load socialaccount %}
 {% providers_media_js %}
-<a href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook Connect</a>
+
+        <div class="grey darken-4" id="login_wrapper" data-property="{videoURL:'http://youtu.be/qN0k-TjeTV4',containment:'#login_wrapper',autoPlay:true, mute:true, startAt:31, opacity:1,loop:true,showControls:false,showYTLogo:false,blur: 5}">
+
+            <div style="margin-top:200px;color: white;" class="valign-wrapper">
+                <h1 class="valign center-block">Carpool for everyone</h1>
+            </div>
+            <div style="margin-top:30px;" class="valign-wrapper">
+                <a class="valign center-block waves-effect waves-light btn-large blue darken-4" href="{% provider_login_url "facebook" method="js_sdk" %}">Login with Facebook</a>
+            </div>
+
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;background: url('http://pupunzi.com/mb.components/mb.YTPlayer/demo/images/raster@2x.png')"></div>
 
 {% endblock %}

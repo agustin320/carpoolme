@@ -14,3 +14,10 @@ main {
 .parallax-container {
       height: 100%;
 }
+
+#login_wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}

@@ -7,6 +7,7 @@
         <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {% compress css %}
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link rel="stylesheet" href="{% static 'css/jquery.mb.YTPlayer.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
         {% endcompress %}
 
@@ -22,7 +23,7 @@
                 <a href="#!" class="brand-logo">Carpool</a>
                 <ul class="right hide-on-med-and-down">
                   <li><a href="sass.html">Sass</a></li>
-                  <li><a href="badges.html">Components</a></li>
+                  <li><a class="waves-effect waves-light btn-large">Crear Ruta</a></li>
                 </ul>
               </div>
             </nav>
@@ -35,7 +36,7 @@
             {% endblock %}
 
         </main>
-
+        {% if user.is_authenticated %}
         <footer class="page-footer">
           <div class="footer-copyright">
             <div class="container">
@@ -43,12 +44,14 @@
             </div>
           </div>
         </footer>
+        {% endif %}
 
 
         {% compress js %}
         <script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-        <link rel="stylesheet" href="{% static 'js/app.js' %}">
+        <script type="text/javascript" charset="utf-8" src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
         {% endcompress %}
 
     </body>
