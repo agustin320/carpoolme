@@ -127,7 +127,7 @@ ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
-         {'METHOD': 'js_sdk',
+         {'METHOD': 'oauth2',
           'SCOPE': ['email', 'public_profile', 'user_friends'],
           'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
           'FIELDS': [
