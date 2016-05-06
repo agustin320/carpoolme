@@ -19,6 +19,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')
 FACEBOOK_APP_SECRET = os.environ.get('FACEBOOK_APP_SECRET')
 
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
