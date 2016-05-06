@@ -14,3 +14,32 @@ main {
 .parallax-container {
       height: 100%;
 }
+
+#login_video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+#login_wrapper{
+    background: url("../images/login_bkg_img.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+.container_block{
+    margin-top: 30px;
+}
+
+.mast_head{
+    margin-top: 25%;
+    color: white;
+    display: none;
+}

@@ -1,1 +1,1 @@
-web: newrelic-admin run-program gunicorn --pythonpath fesecolab_app fesecolab_app.core.wsgi --log-file -
+web: newrelic-admin run-program gunicorn --pythonpath carpool carpool.core.wsgi --log-file -
