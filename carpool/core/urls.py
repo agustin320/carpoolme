@@ -16,8 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
+import analytics
+
+from django.conf import settings
 
 import core.views
+
+analytics.write_key = settings.SEGMENT_ID
 
 urlpatterns = [
     url(r'^$', core.views.user_login, name='home'),

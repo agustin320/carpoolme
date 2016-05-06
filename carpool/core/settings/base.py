@@ -88,6 +88,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'core.context_processors.facebook_app',
+                'core.context_processors.segment_io',
                 'django.template.context_processors.request',
             ],
         },

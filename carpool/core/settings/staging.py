@@ -38,6 +38,10 @@ X_FRAME_OPTIONS = 'DENY'
 FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')
 FACEBOOK_APP_SECRET = os.environ.get('FACEBOOK_APP_SECRET')
 
+# Segment IO settings
+
+SEGMENT_ID = os.environ.get('SEGMENT_ID')
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
