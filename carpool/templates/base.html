@@ -44,7 +44,13 @@
             <nav class="cyan darken-3">
               <div class="nav-wrapper container">
                 <a href="#!" class="brand-logo">Carpool <small>beta</small></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
+                  <li><a href="{% url 'about' %}">Acerca</a></li>
+                  <li><a href="{% url 'create_pool' %}" class="waves-effect waves-light btn-large light-blue darken-4">Crear Ruta</a></li>
+                  <li><a href="{% url 'logout' %}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cerrar Sesión"><i class="material-icons">exit_to_app</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
                   <li><a href="{% url 'about' %}">Acerca</a></li>
                   <li><a href="{% url 'create_pool' %}" class="waves-effect waves-light btn-large light-blue darken-4">Crear Ruta</a></li>
                   <li><a href="{% url 'logout' %}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cerrar Sesión"><i class="material-icons">exit_to_app</i></a></li>
