@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 import core.views
 
@@ -24,6 +25,9 @@ urlpatterns = [
     url(r'^login/$', core.views.user_login, name='login'),
     url(r'^logout/$', core.views.user_logout, name='logout'),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^pools/', core.views.pools, name='pools'),
-    url(r'^pools/create', core.views.create_pool, name='create_pool'),
+    url(r'^pools/$', core.views.pools, name='pools'),
+    url(r'^pools/create/$', core.views.create_pool, name='create_pool'),
+    url(r'^privacy/', TemplateView.as_view(template_name='privacy.html'), name='privacy'),
+    url(r'^terms/', TemplateView.as_view(template_name='terms.html'), name='terms'),
+    url(r'^about/', TemplateView.as_view(template_name='about.html'), name='about'),
  ]

@@ -33,3 +33,13 @@ main {
     position: absolute;
 
 }
+
+.container_block{
+    margin-top: 30px;
+}
+
+.mast_head{
+    margin-top: 25%;
+    color: white;
+    display: none;
+}

@@ -1,10 +1,13 @@
 from django import forms
-
-from carpool.models import Pool
+from core.models import Pool
 
 
 class PoolForm(forms.ModelForm):
-
     class Meta:
         model = Pool
-        fields = ('email', 'password','origen','destino','tipo','dias','fecha')
+        fields = ('origen', 'destino', 'tipo', 'dias', 'fecha')
+
+
+class SearchForm(forms.Form):
+    origen = forms.CharField(max_length=60)
+    destino = forms.CharField(max_length=60)

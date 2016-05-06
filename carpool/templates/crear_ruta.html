@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Crear Ruta{% endblock %}
+
+{% block body_block %}
+
+    <div class="container container_block" xmlns="http://www.w3.org/1999/html">
+
+        <div class="row">
+            <form class="col s12" role="form" method="post" action="{% url 'create_pool' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+              <div class="row">
+                <div class="input-field col s12 m6">
+                    <select name="origen">
+                      <option value="" disabled selected>Elige un destino</option>
+                      {% for colonia in colonias %}
+                      <option value="{{ colonia.pk }}">{{ colonia }}</option>
+                      {% endfor %}
+                    </select>
+                    <label>Origen</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <select name="destino">
+                      <option value="" disabled selected>Elige un origen</option>
+                      {% for colonia in colonias %}
+                      <option value="{{ colonia.pk }}">{{ colonia }}</option>
+                      {% endfor %}
+                    </select>
+                    <label>Destino</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="switch">
+                    <h6>Tipo de Pool</h6>
+                    <label>
+                      Una Sola Vez
+                      <input type="checkbox" name="tipo_show">
+                      <span class="lever"></span>
+                      Regular
+                    </label>
+
+                    <input type="text" name="tipo" hidden>
+                </div>
+              </div>
+              <div class="row" id="dias" style="display: none;">
+                <h6>Días de este pool:</h6>
+                {% for dia in dias %}
+                <input type="checkbox" name="dias" class="filled-in" id="box_{{ dia.pk }}" value="{{ dia.pk }}"/><label style="margin-right: 10px;" for="box_{{ dia.pk }}">{{ dia }}</label>
+                  {% endfor %}
+              </div>
+              <div class="row" id="fecha">
+                <p>Para cuando es este carpool?</p>
+                <input name="fecha" type="date" class="datepicker" placeholder="Elige una Fecha" required>
+              </div>
+
+              <div class="row">
+                  <a href="{% url 'pools' %}" class="btn waves-effect waves-light cyan darken-4" >< Atrás</a>
+                  <button class="btn waves-effect waves-light cyan darken-1" type="submit" name="action">Crear Pool
+                    <i class="material-icons right">directions_car</i>
+                  </button>
+              </div>
+            </form>
+          </div>
+
+    </div>
+
+
+{% endblock %}

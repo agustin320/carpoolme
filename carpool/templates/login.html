@@ -9,11 +9,12 @@
 
         <div class="grey darken-4" id="login_wrapper">
 
-            <div id="mast_head" style="margin-top:200px;color: white;display: none;" class="valign-wrapper container">
-                <h1 class="center-block">Carpool, by everyone</h1>
-            </div>
-            <div id="login_btn" style="margin-top:30px;display: none;" class="valign-wrapper container">
-                <a class="center-block waves-effect waves-light btn-large blue darken-4" href="{% provider_login_url "facebook" method="js_sdk" %}"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> Login with Facebook</a>
+            <div class="container">
+                <div id="mast_head" class="mast_head center">
+                    <h1>Carpool for everyone</h1>
+                    <h3>Rápido, fácil y seguro</h3>
+                    <p><a id="login_btn" class="waves-effect waves-light btn-large blue darken-4" href="{% provider_login_url "facebook" method="js_sdk" %}"><i class="fa fa-facebook-official left" aria-hidden="true"></i> Login con Facebook</a></p>
+                </div>
             </div>
 
         </div>

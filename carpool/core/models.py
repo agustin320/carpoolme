@@ -9,9 +9,9 @@ class Pool(models.Model):
         ('irregular', 'Irregular'),
     )
 
-    creador = models.OneToOneField(settings.AUTH_USER_MODEL)
-    origen = models.ForeignKey('localidad.Colonia', blank=True, null=True, related_name='origen')
-    destino = models.ForeignKey('localidad.Colonia', blank=True, null=True, related_name='destino')
+    creador = models.ForeignKey(settings.AUTH_USER_MODEL)
+    origen = models.ForeignKey('localidad.Colonia', related_name='origen')
+    destino = models.ForeignKey('localidad.Colonia', related_name='destino')
     tipo = models.CharField(max_length=10, choices=TIPO_POOL)
     dias = models.ManyToManyField('Dia', blank=True)
     fecha = models.DateField(blank=True, null=True)

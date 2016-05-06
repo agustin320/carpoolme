@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'carpool',
+    'core',
     'localidad',
     'django.contrib.sites',
     'allauth',
