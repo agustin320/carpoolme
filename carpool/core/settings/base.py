@@ -115,9 +115,15 @@ STATICFILES_FINDERS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+COMPRESS_STORAGE = STATICFILES_STORAGE
+
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.cssmin.CSSMinFilter']
+
 COMPRESS_OFFLINE = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_compressed')
+
+COMPRESS_ROOT = STATIC_ROOT
 
 # Social Media Auth Settings
 

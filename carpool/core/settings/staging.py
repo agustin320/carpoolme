@@ -20,8 +20,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-COMPRESS_ENABLED = True
-
 ALLOWED_HOSTS = ['stg.carpoolcdmx.com']
 
 
@@ -42,6 +40,8 @@ FACEBOOK_APP_SECRET = os.environ.get('FACEBOOK_APP_SECRET')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+COMPRESS_ENABLED = True
 
 STATIC_URL = '/static/'
 
