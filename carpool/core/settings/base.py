@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    "compressor",
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -110,20 +109,12 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-COMPRESS_STORAGE = STATICFILES_STORAGE
-
-COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.cssmin.CSSMinFilter']
-
-COMPRESS_OFFLINE = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_compressed')
-
-COMPRESS_ROOT = STATIC_ROOT
 
 # Social Media Auth Settings
 
