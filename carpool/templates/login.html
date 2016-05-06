@@ -12,8 +12,9 @@
             <div class="container">
                 <div id="mast_head" class="mast_head center">
                     <h1>Carpool for everyone</h1>
-                    <h3>Rápido, fácil y seguro</h3>
                     <p><a id="login_btn" class="waves-effect waves-light btn-large blue darken-4" href="{% provider_login_url "facebook" method="oauth2" %}"><i class="fa fa-facebook-official left" aria-hidden="true"></i> Login con Facebook</a></p>
+                    <br>
+                    {% if co2 > 200 %}<h4>posible ahorro:<br><span class="count">{{ co2 }}</span> Kg de CO<sub>2</sub></h4>{% endif %}
                 </div>
             </div>
 
