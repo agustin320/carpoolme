@@ -15,9 +15,6 @@ class Pool(models.Model):
     tipo = models.CharField(max_length=10, choices=TIPO_POOL)
     dias = models.ManyToManyField('Dia', blank=True)
     fecha = models.DateField(blank=True, null=True)
-    hora = models.CharField(max_length=10, blank=True, null=True)
-    contacto_email = models.CharField(max_length=255, blank=True, null=True)
-    contacto_telefono = models.CharField(max_length=15, blank=True, null=True)
     date_created = models.DateField(blank=True, null=True, default=timezone.now)
 
     def __unicode__(self):

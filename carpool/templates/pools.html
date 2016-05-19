@@ -44,15 +44,11 @@
                     <p>
                         <b>{{ resultado.creador.first_name }}</b>
                     {% if resultado.tipo == 'regular' %}
-                        los dias <b>{% for dia in resultado.dias.all %}{% if forloop.last %} y {% else %}{% if not forloop.first %},{% endif %} {% endif %}{{ dia }}{% endfor %}</b> a las <b>{{ resultado.hora }}</b>
+                        los dias <b>{% for dia in resultado.dias.all %}{% if forloop.last %} y {% else %}{% if not forloop.first %},{% endif %} {% endif %}{{ dia }}{% endfor %}</b>
                     {% else %}
-                        el <b>{{ resultado.fecha|date:"l j" }} de {{ resultado.fecha|date:"F" }}</b> a las <b>{{ resultado.hora }}</b>
+                        el <b>{{ resultado.fecha|date:"l j" }} de {{ resultado.fecha|date:"F" }}</b>
                     {% endif %}
                     de <b>{{ resultado.origen }}</b> a <b>{{ resultado.destino }}</b></p>
-                    <ul>
-                        <li>{% if resultado.contacto_telefono %}{{ resultado.contacto_telefono }}{% endif %}</li>
-                        <li>{% if resultado.contacto_email %}{{ resultado.contacto_email }}{% endif %}</li>
-                    </ul>
                 </div>
                 <div class="card-action">
                   <a href="https://www.facebook.com/{{ resultado.creador.socialaccount_set.all.0.uid }}" target="_blank">Contactar</a>

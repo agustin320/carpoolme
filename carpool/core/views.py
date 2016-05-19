@@ -121,10 +121,7 @@ def create_pool(request):
                 pool = Pool.objects.create(creador=user, origen=pool_form.cleaned_data['origen'],
                                            destino=pool_form.cleaned_data['destino']
                                            , tipo=pool_form.cleaned_data['tipo'],
-                                           fecha=pool_form.cleaned_data['fecha'],
-                                           hora=pool_form.cleaned_data['hora'],
-                                           contacto_telefono=pool_form.cleaned_data['contacto_telefono'],
-                                           contacto_email=pool_form.cleaned_data['contacto_email'])
+                                           fecha=pool_form.cleaned_data['fecha'])
 
                 dias = pool_form.cleaned_data['dias']
 
