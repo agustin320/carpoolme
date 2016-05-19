@@ -6,7 +6,7 @@ Carpool is an open source [carpooling](https://en.wikipedia.org/wiki/Carpool) pr
 #### Deployment
 First of start by deploying to heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/agustin320/carpoolme/tree/master)
 
 #### Configuration
 Once you have you app running, you have to apply the migrations and create a super user to access the Django admin interface and start adding the basic config stuff.
